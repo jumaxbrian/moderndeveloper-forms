@@ -31,7 +31,7 @@ body p{
 
 form{   
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     flex-wrap: wrap;
     width:400px;
 }
@@ -67,4 +67,27 @@ label{
 
 .chkbox{
     width: auto;
+    font-weight: bold;
+}
+
+input#billing-fname{
+    width: 44%;
+    display: inline-block;
+}
+
+input#billing-lname{
+    width: 50%;
+}
+
+button{
+    height: 2.5rem;
+    border-radius: 2px;
+    background-color: #0085cf;
+    border: 0;
+    transition: background-color .2s;
+}
+
+button:hover{
+    background-color: rgba(132, 208, 225, 0.9);
+
 }
