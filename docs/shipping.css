@@ -1,0 +1,70 @@
+html{
+    font-size: 16px;
+   
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container{    
+    width: 420px;
+    /*background-color: grey;*/
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+body p{
+    text-align: center;
+    font-size: 20px;
+    /*color: #8c8d8e;*/
+}
+
+form{   
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:400px;
+}
+
+input, button{
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 380px;
+    
+}
+
+form div {
+    margin-top: 10px;
+}
+
+input{
+    display: inline-block;
+    /*color:white;*/
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid rgba(140, 141, 142, 0.4);   
+    box-shadow:inset  2px 2px 5px 0px rgba(140, 141, 142, 0.2);
+}
+
+input:focus{
+    outline: 0;
+}
+
+label{
+    font-size: 0.9rem;
+    color: rgba(20, 20, 20, 0.8);
+}
+
+.chkbox{
+    width: auto;
+}
