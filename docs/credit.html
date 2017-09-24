@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="credit.css">
+    <title>Credit Card</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="images">
+                <img src="CreditCardLogos.png" alt="">
+            </div>
+
+            <div class="content">
+                <div class="name top-margin">
+                    <label for="cardholder-name">Name</label>
+                    <input type="text" name="cardholder-name" value="">
+                </div>
+                <div class="number top-margin">
+                    <label for="card-number">Card Number</label>
+                    <div class="four-numbers">
+                        <input type="text" name="card-number-1" maxlength="4" size="4">-
+                        <input type="text" name="card-number-2" maxlength="4" size="4">-
+                        <input type="text" name="card-number-3" maxlength="4" size="4">-
+                        <input type="text" name="card-number-4" maxlength="4" size="4">
+                    </div>
+
+                </div>
+
+                <div class="expiry top-margin">
+                    <label for="expiry-date">Expiry Date:</label>
+                    <div class="drop-down">
+                        <select id="month">
+                    <option value = "1">Jan-01</option>
+                    <option value = "2">Feb-02</option>
+                    <option value = "3">Mar-03</option>
+                    <option value = "4">Apr-04</option>
+                    <option value = "5">May-05</option>
+                    <option value = "6">Jun-06</option>
+                    <option value = "7">Jul-07</option>
+                    <option value = "8">Aug-08</option>
+                    <option value = "9">Sep-09</option>
+                    <option value = "10">Oct-10</option>
+                    <option value = "11">Nov-11</option>
+                    <option value = "12">Dec-12</option>
+                </select>
+                    </div>
+                    <div class="drop-down">
+                        <select id="year">
+                    <option value = "2017">2017</option>
+                    <option value = "2018">2018</option>
+                    <option value = "2019">2019</option>
+                    <option value = "2020">2020</option>
+                    <option value = "2021">2021</option>
+                    <option value = "2022">2022</option>
+                    <option value = "2023">2023</option>
+                    <option value = "2024">2024</option>
+                    <option value = "2025">2025</option>
+                    <option value = "2026">2026</option>
+                    <option value = "2027">2027</option>
+                    <option value = "2028">2028</option>
+                    <option value = "2029">2029</option>
+                    <option value = "2030">2030</option>
+                    <option value = "2031">2031</option>
+                </select>
+                    </div>
+
+                </div>
+
+                <div class="security top-margin">
+                    <label for="expiry-date">CSV Code:</label>
+                    <input type="text" maxlength="3" size="3">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

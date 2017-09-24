@@ -1,0 +1,146 @@
+html{
+    font-size: 16px;
+   
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body{
+    /*background-color: grey;*/
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.container{
+    background-color: white;
+    width: 400px;
+    /*height: 271px;*/
+    padding: 10px;
+    border-radius: 5px;
+    /*box-shadow: 10px 10px 5px #888888;*/
+        border: 1px solid blanchedalmond;
+}
+
+.images{
+    background-color: white;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+
+.content{
+    border-bottom: 2px;
+    border-bottom-color: black;
+}
+
+.images img{
+    height: 100%;
+    /*width: 100%;*/
+}
+
+.name{
+    height: 60px;
+    /*padding: 5px;*/
+    width: 100%;
+    display: block;
+}
+
+label{ 
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.name input{
+    width: 100%;
+}
+
+input:focus{
+    outline: none;
+}
+
+input{
+    font-size: 1.2rem;
+    background: transparent;
+    border:0;
+    border-bottom: thin solid lightgray;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.number{
+    /*background-color: white;*/
+    height: 60px;
+    width: 100%;
+}
+
+.four-numbers{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+} 
+
+
+
+.date-security{
+    height: 60px;
+
+}
+
+.expiry{
+    width: 70%;
+    /*background-color: red;*/
+     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.expiry label{
+    width: 100%;
+}
+
+.security{
+    width: 30%; 
+    /*background-color: blue;*/
+}
+
+.drop-down{        
+    background-image: url(down_arrow.png);
+    background-repeat: no-repeat;
+    background-position: 95% 0%;
+    height: 25px;
+    width: 80px;
+    overflow: hidden;
+}
+
+.drop-down select{
+    background: transparent;
+    border: none;
+    height: 25px;
+    width: 100px;
+}
+
+.content{
+    /*background-color: 	rgb(240,248,255);*/
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.top-margin{
+    margin-top: 10px;
+}
