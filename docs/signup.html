@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="text/css" rel="stylesheet" href="login.css" />
+    <script src="validator.js"></script>
+
     <title>Signup Form</title>
 </head>
 
 <body>
     <div class="container">
-        <p>Signup Form</p>
+        <div>
+            <p>Signup Form</p>
+        </div>
 
-        <form>
+        <div>
+            <!--<p id="error-msg">whoa</p>-->
+        </div>
+
+        <form id="signup-form">
+            <p id="error-msg"></p>
             <div>
                 <input type="text" id="fname" placeholder="First Name" />
             </div>
@@ -24,7 +33,7 @@
                 <input type="text" id="email" placeholder="Email" />
             </div>
             <div>
-                <input type="date" id="date" placeholder="MM/DD/YYYY" />
+                <input type="date" id="date" placeholder="Email" />
             </div>
             <div>
                 <input type="text" id="password1" placeholder="Enter Password" />
@@ -39,6 +48,7 @@
         </form>
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

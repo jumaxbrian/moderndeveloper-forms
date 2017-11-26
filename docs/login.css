@@ -59,6 +59,15 @@ input{
     border-radius: 2px;
 }
 
+input.invalid {
+    border: 2px solid rgba(255, 141, 142, 0.9);   
+
+}
+
+#error-msg{
+    font-size: 0.99rem;
+}
+
 input:focus{
     outline: 0;
 }
