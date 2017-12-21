@@ -25,6 +25,28 @@ signupForm.addEventListener('submit', function (event) {
         errorMsg = ""
     }
 
+    //validating passwords
+    if (validator.isEmpty(password1.value)) {
+        errorMsg = "Password cannot be empty";
+        flagNodeAsInvalid(password1);
+    } else if (validator.isOfLengthOrLessThan(password1.value, 6)) {
+        flagNodeAsInvalid(password1);
+        errorMsg = "Password cannot be less than 7 characters";
+    }
+
+    if (validator.isEmpty(password2.value)) {
+        errorMsg = "Password cannot be empty";
+        flagNodeAsInvalid(password2);
+    } else if (validator.isOfLengthOrLessThan(password2.value, 6)) {
+        flagNodeAsInvalid(password2);
+        errorMsg = "Password cannot be less than 7 characters";
+    }
+
+    if (password1.value !== password2.value) {
+        flagNodeAsInvalid(password2);
+        errorMsg = "Passwords does not match the first one";
+    }
+
     //validating date
     try {
         validator.isDate(date);
@@ -78,25 +100,26 @@ signupForm.addEventListener('submit', function (event) {
 
 
 
-
-
-
+    //inject invalid class to erroneous nodes
     function flagNodeAsInvalid(nodeVar) {
         validFlag = false;
         nodeVar.className = "invalid";
 
     }
 
+    //remove invalid class from nodes
     function resetErroneousElement(nodeInput) {
         nodeInput.classList.remove("invalid");
 
     }
 
+    //removes error message from div
     function resetValidFlag() {
         errorMsgNode.innerText = "";
         validFlag = true;
     }
 
+    //injects error message on div
     if (!validFlag) {
         errorMsgNode.innerText = errorMsg;
         console.log(errorMsg);
