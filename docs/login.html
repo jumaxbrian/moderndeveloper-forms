@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <title>Login Form</title>
     <link type="text/css" rel="stylesheet" href="login.css" />
+    <script src="validator.js"></script>
 </head>
 
 
 <body>
     <div class="container">
         <p>Login Form</p>
-        <form>
+        <form id="login-form">
+            <p id="error-msg"></p>
             <div>
                 <input type="text" id="email" placeholder="Email" />
             </div>
@@ -24,5 +26,8 @@
 
         </form>
     </div>
+
+    <script src="login_validation.js"></script>
+</body>
 
 </html>
