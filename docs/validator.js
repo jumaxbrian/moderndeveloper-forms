@@ -72,7 +72,7 @@ var getValidator = function (window) {
             ans = false;
 
         if ((startsWith === '+254') &&  //country code for Kenya
-            (containsOnlyNumbers(inputNumeric)) &&
+            (validator.containsOnlyNumbers(inputNumeric)) &&
             (input.length === 13)) {
             ans = true;
             console.log(startsWith)
@@ -133,6 +133,22 @@ var getValidator = function (window) {
 
         return yearsSince > 18;
 
+    }
+
+    validator.isHour = function (input) {
+        var numHour = parseInt(input),
+            ans = false;
+        if ((numHour >= 0) && (numHour <= 23))
+            ans = true;
+        return ans;
+    }
+
+    validator.isMinute = function (input) {
+        var numMinute = parseInt(input),
+            ans = false;
+        if ((numMinute >= 0) && (numMinute <= 59))
+            ans = true;
+        return ans;
     }
 
     validator.isEmpty = function (input) {
