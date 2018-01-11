@@ -15,7 +15,7 @@ body{
 
 .card{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
 
 }
@@ -143,4 +143,25 @@ input{
 
 .top-margin{
     margin-top: 10px;
+}
+
+.button{
+    margin-bottom: 10px;
+    /* width: 380px; */
+    /* margin: 0 auto; */
+}
+
+button{
+    height: 2.5rem;
+    border-radius: 2px;
+    background-color: rgb(132, 208, 225);
+    border: 0;
+    transition: background-color .2s;
+    padding: 2px 20px;
+    margin: 5px auto;
+}
+
+button:hover{
+    background-color: rgba(132, 208, 225, 0.9);
+
 }

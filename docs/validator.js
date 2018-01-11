@@ -151,6 +151,14 @@ var getValidator = function (window) {
         return ans;
     }
 
+    validator.isMonth = function (input) {
+        var numMonth = parseInt(input),
+            ans = false;
+        if ((numMonth >= 1) && (numMonth <= 12))
+            ans = true;
+        return ans;
+    }
+
     validator.isEmpty = function (input) {
         var inputLen = input.length,
             lengthChanged = true;
@@ -190,12 +198,13 @@ var getValidator = function (window) {
         return ans;
     }
 
-    // var input = '  name';
-    // console.log(isTrimmed(input))
-    // var input = 'name ';
-    // console.log(isTrimmed(input))
-    // var input = 'name';
-    // console.log(isTrimmed(input))
+    validator.containsExactMatch = function (input, wordsArray) {
+        var ans = wordsArray.includes(input);
+        console.log('containsExactMatch ', ans);
+        console.log("whole array: ", wordsArray.toString())
+        console.log("actual input ", input);
+        return ans;
+    }
 
     validator.contains = function (input, words) {
         var punctuationMarks = [".", ",", ";", ":", "?", "!", "'", '"'],
@@ -209,7 +218,7 @@ var getValidator = function (window) {
             for (var j = 0; j < words.length; j++) {
                 var word = words[j].toLowerCase();
                 if (inputArr[i] === word) {
-                    // console.log('inside if ', inputArr[i], words[j])
+                    console.log('inside if ', inputArr[i], words[j])
                     ans = true;
                     break;
                 }
@@ -287,6 +296,12 @@ var getValidator = function (window) {
         return input.length >= n;
     }
 
+    validator.isEqual = function (input, n) {
+        // input = input.trim();
+        console.log("length of input:", input, ".", "input.length", input.length);
+        return input.length == n;
+    }
+
     validator.lessWordsThan = function (input, n) {
         var punctuationMarks = [".", ",", ";", ":", "?", "!", "'", '"'];
 
@@ -318,7 +333,7 @@ var getValidator = function (window) {
         for (var i = 0; i < input.length; i++) {
             var element = input[i];
             // console.log('i', i)
-            if (!(containsOnlyAlphabet(element) || containsOnlyNumbers(element))) {
+            if (!(containsOnlyAlphabet(element) || validator.containsOnlyNumbers(element))) {
                 ans = false;
                 break;
             }
@@ -336,7 +351,7 @@ var getValidator = function (window) {
         console.log('input', input)
 
         //confirm it only contains numbers
-        if (containsOnlyNumbers(input)) {
+        if (validator.containsOnlyNumbers(input)) {
             if (input.length === 16) {
                 ans = true;
             }
@@ -457,7 +472,7 @@ var getValidator = function (window) {
     //     for (var i = 0; i < input.length; i++) {
     //         var element = input[i];
     //         // console.log('i', i)
-    //         if (!(containsOnlyAlphabet(element) || containsOnlyNumbers(element))) {
+    //         if (!(containsOnlyAlphabet(element) || validator.containsOnlyNumbers(element))) {
     //             ans = false;
     //             break;
     //         }
