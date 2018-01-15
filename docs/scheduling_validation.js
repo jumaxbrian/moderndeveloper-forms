@@ -133,10 +133,10 @@ schedulingForm.addEventListener('submit', function (event) {
     //injects error message on div
     if (!validFlag) {
         errorMsgNode.innerText = errorMsg;
-        console.log(errorMsg);
+        // console.log(errorMsg);
     }
 
     // console.log(contactNo, timezone, email, date, password1, password2);
 })
 
-console.log(schedulingForm);
+// console.log(schedulingForm);
