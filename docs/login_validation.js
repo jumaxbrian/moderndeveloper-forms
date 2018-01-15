@@ -65,10 +65,10 @@ loginForm.addEventListener('submit', function (event) {
     //injects error message on div
     if (!validFlag) {
         errorMsgNode.innerText = errorMsg;
-        console.log(errorMsg);
+        // console.log(errorMsg);
     }
 
     // console.log(firstName, lastName, email, date, password, password2);
 })
 
-console.log(loginForm);
+// console.log(loginForm);
