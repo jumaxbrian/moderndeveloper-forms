@@ -64,7 +64,7 @@ creditForm.addEventListener('submit', function (event) {
     //validating creditCardNo
     var creditCardNo = number1.value + number2.value + number3.value + number4.value,
         creditCardValidFlag = true;
-    console.log("Credit card no ", creditCardNo);
+    // console.log("Credit card no ", creditCardNo);
     if (validator.isEmpty(creditCardNo)) {
         errorMsg = "credit Card Number cannot be empty";
         creditCardValidFlag = false;
@@ -114,10 +114,10 @@ creditForm.addEventListener('submit', function (event) {
     //injects error message on div
     if (!validFlag) {
         errorMsgNode.innerText = errorMsg;
-        console.log(errorMsg);
+        // console.log(errorMsg);
     }
 
     // console.log(firstName, lastName, email, date, password1, password2);
 })
 
-console.log(creditForm);
+// console.log(creditForm);
